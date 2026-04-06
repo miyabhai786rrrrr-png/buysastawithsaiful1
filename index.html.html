@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>buysastawithsaiful</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .header {
+            background: black;
+            color: white;
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>buysastawithsaiful 😎</h1>
+    <p>Best Clothes Under Your Budget</p>
+</div>
+
+<h2>Select Your Budget</h2>
+
+<div class="cards">
+
+    <div class="card" onclick="openPage('100.html')">
+        <img src="p1.jpg">
+        <p>Under ₹100</p>
+        <div class="price">₹99</div>
+    </div>
+
+    <div class="card">
+        <img src="p2.jpg">
+        <p>Under ₹200</p>
+        <div class="price">₹199</div>
+    </div>
+
+    <div class="card">
+        <img src="p3.jpg">
+        <p>Under ₹300</p>
+        <div class="price">₹299</div>
+    </div>
+
+    <div class="card">
+        <img src="p4.jpg">
+        <p>Under ₹400</p>
+        <div class="price">₹399</div>
+    </div>
+
+    <div class="card">
+        <img src="p5.jpg">
+        <p>Under ₹500</p>
+        <div class="price">₹499</div>
+    </div>
+
+    <div class="card">
+        <img src="p6.jpg">
+        <p>Under ₹600</p>
+        <div class="price">₹599</div>
+    </div>
+
+</div>
+
+<script>
+function openPage(page){
+    window.open(page, "_blank");
+}
+</script>
+
+</body>
+</html>

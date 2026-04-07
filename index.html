@@ -1,110 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>buysastawithsaiful</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f4f4f4;
-            text-align: center;
-        }
+  <title>buysastawithsaiful</title>
 
-        .header {
-            background: black;
-            color: white;
-            padding: 15px;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h2 {
-            margin-top: 20px;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f4f4f4;
+      text-align: center;
+    }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            width: 80%;
-            margin: 20px auto;
-        }
+    header {
+      background: linear-gradient(90deg, #000, #333);
+      color: white;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
 
-        .card {
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
+    h1 {
+      font-size: 24px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+    p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
 
-        .card img {
-            width: 100%;
-        }
+    h2 {
+      margin-top: 20px;
+    }
 
-        .price {
-            color: green;
-            font-weight: bold;
-        }
-    </style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+
+    /* 🔥 HOVER GLOW EFFECT */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: green;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* 🔥 BUTTON STYLE */
+    .card a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<div class="header">
-    <h1>buysastawithsaiful 😎</h1>
-    <p>Best Clothes Under Your Budget</p>
-</div>
+<header>
+  <h1>buysastawithsaiful 😎</h1>
+  <p>Best Clothes Under Your Budget</p>
+</header>
 
 <h2>Select Your Budget</h2>
 
-<div class="cards">
+<div class="container">
 
-    <div class="card" onclick="openPage('100.html')">
-        <img src="p1.jpg">
-        <p>Under ₹100</p>
-        <div class="price">₹99</div>
-    </div>
+  <div class="card">
+    <a href="100.html">
+      <img src="images/p1.jpg">
+      <p>Under ₹100</p>
+      <p class="price">₹99</p>
+    </a>
+  </div>
 
-    <div class="card">
-        <img src="p2.jpg">
-        <p>Under ₹200</p>
-        <div class="price">₹199</div>
-    </div>
+  <div class="card">
+    <img src="images/p2.jpg">
+    <p>Under ₹200</p>
+    <p class="price">₹199</p>
+  </div>
 
-    <div class="card">
-        <img src="p3.jpg">
-        <p>Under ₹300</p>
-        <div class="price">₹299</div>
-    </div>
+  <div class="card">
+    <img src="images/p3.jpg">
+    <p>Under ₹300</p>
+    <p class="price">₹299</p>
+  </div>
 
-    <div class="card">
-        <img src="p4.jpg">
-        <p>Under ₹400</p>
-        <div class="price">₹399</div>
-    </div>
+  <div class="card">
+    <img src="images/p4.jpg">
+    <p>Under ₹400</p>
+    <p class="price">₹399</p>
+  </div>
 
-    <div class="card">
-        <img src="p5.jpg">
-        <p>Under ₹500</p>
-        <div class="price">₹499</div>
-    </div>
+  <div class="card">
+    <img src="images/p5.jpg">
+    <p>Under ₹500</p>
+    <p class="price">₹499</p>
+  </div>
 
-    <div class="card">
-        <img src="p6.jpg">
-        <p>Under ₹600</p>
-        <div class="price">₹599</div>
-    </div>
+  <div class="card">
+    <img src="images/p6.jpg">
+    <p>Under ₹600</p>
+    <p class="price">₹599</p>
+  </div>
 
 </div>
-
-<script>
-function openPage(page){
-    window.open(page, "_blank");
-}
-</script>
 
 </body>
 </html>

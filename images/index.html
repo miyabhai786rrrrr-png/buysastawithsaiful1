@@ -1,161 +1,193 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>buysastawithsaiful</title>
+  <title>buysastawithsaiful</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f4f4f4;
-            text-align: center;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .header {
-            background: black;
-            color: white;
-            padding: 15px;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f4f4f4;
+      text-align: center;
+    }
 
-        .banner img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+    header {
+      background: linear-gradient(90deg, #000, #333);
+      color: white;
+      padding: 20px;
+    }
 
-        h2 {
-            margin-top: 20px;
-        }
+    h1 {
+      margin: 0;
+    }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            width: 80%;
-            margin: 20px auto;
-        }
+    /* Banner */
+    .banner img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
 
-        .card {
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
+    /* Cards layout */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 10px;
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #2874f0;
-        }
+    /* Laptop */
+    @media (min-width: 900px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
 
-        .price {
-            color: green;
-            font-weight: bold;
-        }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,150,255,0.6);
+    }
 
-        .about {
-            margin: 30px auto;
-            width: 80%;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    </style>
+    .price {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Login button */
+    .login-btn {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .popup-box {
+      background: white;
+      padding: 20px;
+      margin: 100px auto;
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+
+  </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>buysastawithsaiful 😎</h1>
-        <p>Best Clothes Under Your Budget</p>
-    </div>
+<header>
+  <h1>buysastawithsaiful 😎</h1>
+  <p>Best Clothes Under Your Budget</p>
+  <button class="login-btn" onclick="openLogin()">Login</button>
+</header>
 
-    <div class="banner">
-        <img src="New folder/banner.jpg.">
-    </div>
+<!-- Banner -->
+<div class="banner">
+  <img src="images/banner.jpg">
+</div>
 
-    <h2>Select Your Budget</h2>
+<h2>Select Your Budget</h2>
 
-    <div class="cards">
+<div class="container">
 
-        <a href="100.html" target="_blank">
-            <div class="card">
-                <img src="New folder/ph1.jpg">
-                <p>Under ₹100</p>
-                <div class="price">₹99</div>
-            </div>
-        </a>
+  <div class="card">
+    <img src="images/ph1.jpg">
+    <p>Under ₹100</p>
+    <p class="price">₹99</p>
+  </div>
 
-        <a href="200.html" target="_blank">
-            <div class="card">
-                <img src="New folder/ph2.jpg">
-                <p>Under ₹200</p>
-                <div class="price">₹199</div>
-            </div>
-        </a>
+  <div class="card">
+    <img src="images/ph2.jpg">
+    <p>Under ₹200</p>
+    <p class="price">₹199</p>
+  </div>
 
-        <a href="300.html" target="_blank">
-            <div class="card">
-                <img src="New folder/ph3.jpg">
-                <p>Under ₹300</p>
-                <div class="price">₹299</div>
-            </div>
-        </a>
+  <div class="card">
+    <img src="images/ph3.jpg">
+    <p>Under ₹300</p>
+    <p class="price">₹299</p>
+  </div>
 
-        <a href="400.html" target="_blank">
-            <div class="card">
-                <img src="New folder/ph4.jpg">
-                <p>Under ₹400</p>
-                <div class="price">₹399</div>
-            </div>
-        </a>
+  <div class="card">
+    <img src="images/ph4.jpg">
+    <p>Under ₹400</p>
+    <p class="price">₹399</p>
+  </div>
 
-        <a href="500.html" target="_blank">
-            <div class="card">
-                <img src="New folder/ph5.jpg">
-                <p>Under ₹500</p>
-                <div class="price">₹499</div>
-            </div>
-        </a>
+  <div class="card">
+    <img src="images/ph5.jpg">
+    <p>Under ₹500</p>
+    <p class="price">₹499</p>
+  </div>
 
-        <a href="600.html" target="_blank">
-            <div class="card">
-                <img src="New folder/ph6.jpg">
-                <p>Under ₹600</p>
-                <div class="price">₹599</div>
-            </div>
-        </a>
+  <div class="card">
+    <img src="images/ph6.jpg">
+    <p>Under ₹600</p>
+    <p class="price">₹599</p>
+  </div>
 
-    </div>
+</div>
 
-    <div class="about">
-        <h2>About LowPrice Fashion</h2>
-        <p>
-            Welcome to LowPrice Fashion 😎 – your one-stop destination for stylish and affordable clothing. 
-            Our website is specially designed for people who want to look good without spending too much money. 
-            Here, we provide a wide range of clothes under different budget categories like ₹100, ₹200, ₹300, and more. 
-            Each section contains carefully selected products that are trendy, comfortable, and budget-friendly.
+<!-- Login Popup -->
+<div class="popup" id="loginPopup">
+  <div class="popup-box">
+    <h3>Login</h3>
+    <input type="text" placeholder="Username"><br>
+    <input type="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <button onclick="closeLogin()">Close</button>
+  </div>
+</div>
 
-            Our goal is to help you find the best deals from trusted platforms like Flipkart and Amazon. 
-            With just one click, you can directly visit the product page and buy your favorite item easily. 
-            We regularly update our collection so that you always get the latest fashion at the lowest prices.
+<script>
+function openLogin() {
+  document.getElementById("loginPopup").style.display = "block";
+}
 
-            LowPrice Fashion is perfect for students and budget shoppers who want quality at a low price. 
-            Explore different categories, compare styles, and choose what suits you best. 
-            Start shopping smart and stay stylish with us!
-        </p>
-    </div>
+function closeLogin() {
+  document.getElementById("loginPopup").style.display = "none";
+}
+
+function login() {
+  alert("Login successful 😎 (Demo)");
+  closeLogin();
+}
+</script>
 
 </body>
 </html>
